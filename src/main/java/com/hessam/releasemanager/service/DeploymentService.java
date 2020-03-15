@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface DeploymentService {
 
-    public List<MicroService> getMicroservices(int systemVersion);
+    public List<MicroService> getMicroServices(int systemVersion);
 
     public int newDeployment(MicroService microService);
 

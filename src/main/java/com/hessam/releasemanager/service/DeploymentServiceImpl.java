@@ -20,7 +20,7 @@ public class DeploymentServiceImpl implements DeploymentService {
     SystemVersionDao systemVersionDao;
 
     @Override
-    public ArrayList<MicroService> getMicroservices(int systemVersion) {
+    public ArrayList<MicroService> getMicroServices(int systemVersion) {
         Deployment deployment = deploymentDao.findBySystemVersion(systemVersion);
         if(deployment == null)
             return null;

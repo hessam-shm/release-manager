@@ -3,13 +3,9 @@ package com.hessam.releasemanager.controller;
 import com.hessam.releasemanager.bean.MicroService;
 import com.hessam.releasemanager.service.DeploymentService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Map;
 
 @RestController
 public class ReleaseController {
@@ -32,7 +28,7 @@ public class ReleaseController {
             throw new BadRequestException();
         }
 
-        List<MicroService> response = deploymentService.getMicroservices(version);
+        List<MicroService> response = deploymentService.getMicroServices(version);
 
         if(response == null)
             throw new NotFoundException();
